@@ -1,22 +1,106 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter',sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 32px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  padding: 16px 32px;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 40px;
+  border: 1px #ff4b4b;
+  background: #f00d0d;
+}
+
+body {
+  position: relative;
+  background-color: #ebf0ff;
+}
+
+.absoluter > div {
+  position: absolute;
+  z-index: -1;
+  width: 634px;
+  height: 634px;
+}
+
+.rectangle1 {
+  top: 445px;
+  left: -280px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffdf7c 0%,
+    rgba(246, 251, 248, 0) 100%
+  );
+}
+.rectangle2 {
+  opacity: 0.7;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #b9ceea 0%,
+    rgba(246, 251, 248, 0) 100%
+  );
+  left: 172px;
+  top: -100px;
+}
+.rectangle3 {
+  opacity: 0.7;
+  left: 620px;
+  top: 100px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffdf7c 0%,
+    rgba(246, 251, 248, 0) 100%
+  );
+}
+
+/* header qismini to'grilab olaman men  */
+
+.header-content {
+  display: block;
+}
+
+header .container {
+  display: flex;
+  border: 1px solid red;
+  justify-content: space-between;
+}
+.header-content-image{
+    position: relative;
+    width: 50%;
+    border: 1px solid red;
 
 }
-.container{
-    width: 90vw;
-    margin: 0 auto;
-    padding: 0;
+.header-content-image img{
+    position: absolute;
+    
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid black;
-}
-.header-content{
-    display: flex;
-    border: 1px solid black;
+.header-content-image img:first-child{
+    top: 80px;
 }

@@ -80,6 +80,24 @@ body {
   );
 }
 
+.rectangle4{
+  top: 340px;
+  right: 140px;
+  background: radial-gradient(50% 50% at 50% 50%, #B9CEEA 0%, rgba(246, 251, 248, 0.00) 100%);
+}
+
+.rectangle5{
+  top: 1300px;
+  left: 350px;
+  opacity: 0.7;
+background: radial-gradient(50% 50% at 50% 50%, #B9CEEA 0%, rgba(246, 251, 248, 0.00) 100%);
+}
+.rectangle6{
+  right: 100px;
+  bottom: 810px;
+  opacity: 0.4;
+  background: radial-gradient(50% 50% at 50% 50%, #FFDF7C 0%, rgba(246, 251, 248, 0.00) 100%);}
+
 /* header qismini to'grilab olaman men  */
 
 .header-content {

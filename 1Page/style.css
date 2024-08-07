@@ -88,19 +88,76 @@ body {
 
 header .container {
   display: flex;
-  border: 1px solid red;
-  justify-content: space-between;
+  gap: 150px;
+  justify-content: center;
 }
-.header-content-image{
-    position: relative;
-    width: 50%;
-    border: 1px solid red;
+.header-content-image {
+  position: relative;
+  width: 50%;
+}
+.header-content-image img {
+  position: absolute;
+}
+.header-content-image img:first-child {
+  top: 80px;
+}
+.header-text h1 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.change-text {
+  color: #5380ea;
+}
+.header-text span img {
+  width: 244.043px;
+  height: 18.128px;
+  transform: rotate(3.462deg);
+}
+.header-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+.card {
+  display: flex;
+  width: 577px;
+  padding: 24px;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 10px;
+  background: #f6fbf8;
+  box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(2px);
+}
+.card h3 {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.card p {
+  color: #515151;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.last-card {
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    #f6fbf8 0%,
+    #f6fbf8 0.01%,
+    rgba(246, 251, 248, 0) 100%
+  );
+  backdrop-filter: blur(2px);
+  box-shadow: none;
+}
 
-}
-.header-content-image img{
-    position: absolute;
-    
-}
-.header-content-image img:first-child{
-    top: 80px;
+.last-card>img, .last-card>div{
+  display: none;
 }

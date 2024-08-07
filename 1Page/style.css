@@ -166,7 +166,6 @@ header .container {
 
 .main-content {
   display: flex;
-  margin: 0 auto;
   border-radius: 10px;
   background: #f6fbf8;
   box-shadow: 0px 34px 44px -20px rgba(185, 206, 234, 0.25);
@@ -174,6 +173,36 @@ header .container {
   padding: 24px;
   gap: 10px;
   margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.main-text {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+}
+.card-text {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text h3 {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.card-text p {
+  color: #515151;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 300px;
 }
 
 section {
@@ -218,10 +247,10 @@ section {
   height: 100px;
   filter: grayscale(80%);
 }
+
 .form-image {
   position: relative;
-  width: 50%;
-  border: 1px solid blue;
+  width: 40%;
   left: 30px;
 }
 .form-image img {
@@ -234,10 +263,9 @@ section {
 
 .form-main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .form-page {
-  border: 1px solid red;
   border-radius: 10px;
   background: #fff;
 
@@ -249,4 +277,62 @@ section {
   justify-content: center;
   align-items: flex-start;
   gap: 48px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+form .form-letter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-letter label {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.form-letter span {
+  color: #eb5939;
+}
+.form-letter input {
+  display: flex;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  outline: #5380ea;
+  border-radius: 5px;
+  border: 1px solid #dee6ff;
+  background: #f9faff;
+}
+.form-letter input::placeholder {
+  color: #aaa;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+form button {
+  border-radius: 40px;
+  border: 1px solid #5380ea;
+  background: #5380ea;
+  box-shadow: 0px 10px 34px 0px rgba(83, 128, 234, 0.5);
+  width: 200px;
+}
+
+form p {
+  width: 441px;
+}
+
+main {
+  margin: 100px 0;
+}
+hr {
+  background-color: #9ca0ff;
+  height: 1px;
+  border: 0;
 }

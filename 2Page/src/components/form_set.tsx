@@ -48,43 +48,43 @@ export const FormAbout = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="w-full flex gap-4 items-center">
-          
-          {/* Username Field */}
-          <FormField
-            control={form.control}
-            name="username"
-            render={({ field }) => (
-              <FormItem className="flex flex-col w-full">
-                <FormLabel>Username</FormLabel>
-                <FormControl>
-                  <Input placeholder="Ismingiz" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          className="w-full flex gap-4 items-end mt-10 flex-col lg:flex-row lg:items-end">
+          <div className="w-full flex gap-4 items-center flex-col lg:flex-row lg:items-center">
+            {/* Username Field */}
+            <FormField
+              control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem className="flex flex-col w-full">
+                  <FormLabel className="text-start ml-1 text-md hover:text-red-600">Username</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Ismingiz" {...field}  className="h-12" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          {/* Phone Number Field */}
-          <FormField
-            control={form.control}
-            name="phone"
-            render={({ field }) => (
-              <FormItem className="flex flex-col w-full">
-                <FormLabel>Phone Number</FormLabel>
-                <FormControl>
-                  <Input placeholder="Telefon raqamingiz" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+            {/* Phone Number Field */}
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem className="flex flex-col w-full">
+                  <FormLabel  className="text-start ml-1 text-md hover:text-red-600">Phone Number</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Telefon raqamingiz" {...field}  className="h-12" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
           {/* Submit Button */}
-          <Button type="submit" className="bg-red-600">
+          <Button type="submit" className="bg-red-600 h-12 ">
             Получить консультацию
           </Button>
-          
         </form>
       </Form>
     </div>

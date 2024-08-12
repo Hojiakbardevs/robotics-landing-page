@@ -17,7 +17,7 @@ export const Headernav = () => {
     <header>
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-6 lg:px-8">
+        className="flex items-center justify-between p-6 lg:px-8 bg-white shadow-sm">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <img src={LogoFull} alt="Roboticslab logo" className="h-8 w-auto" />
@@ -99,7 +99,7 @@ export const Headernav = () => {
                   <div className="py-6">
                     <a
                       href="#_"
-                      className="flex content-center items-center gap-2 font-medium bg-black text-white px-5 py-2 rounded-lg hover:bg-red-600 ">
+                      className="flex justify-center items-center gap-2 font-medium bg-black text-white px-5 py-2 rounded-lg hover:bg-red-600 ">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"

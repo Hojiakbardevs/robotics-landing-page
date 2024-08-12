@@ -56,7 +56,7 @@ export const FormAbout = () => {
               name="username"
               render={({ field }) => (
                 <FormItem className="flex flex-col w-full">
-                  <FormLabel className="text-start ml-1 text-md hover:text-red-600">Username</FormLabel>
+                  <FormLabel className="text-start ml-1 text-md hover:text-red-600">Ism familiya</FormLabel>
                   <FormControl>
                     <Input placeholder="Ismingiz" {...field}  className="h-12" />
                   </FormControl>
@@ -71,7 +71,7 @@ export const FormAbout = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem className="flex flex-col w-full">
-                  <FormLabel  className="text-start ml-1 text-md hover:text-red-600">Phone Number</FormLabel>
+                  <FormLabel  className="text-start ml-1 text-md hover:text-red-600">Telefon raqamingiz</FormLabel>
                   <FormControl>
                     <Input placeholder="Telefon raqamingiz" {...field}  className="h-12" />
                   </FormControl>

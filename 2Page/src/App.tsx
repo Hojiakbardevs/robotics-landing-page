@@ -6,6 +6,7 @@ function App() {
     <Headernav></Headernav>
     <hr />
     <Heading/>
+    
   </div>
   </>;
 }

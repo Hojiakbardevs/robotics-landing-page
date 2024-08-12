@@ -1,64 +1,55 @@
-import Logos from "./../assets/img/logofull.svg";
-import Menuicon from "./../assets/img/menu.svg";
+import LogoFull from "@/assets/img/logofull.svg";
+import Menu from "@/assets/img/menu.svg";
+import { Button } from "./ui/button";
+import { useState } from "react";
+
+const navigation = [
+  { name: "Product", href: "#" },
+  { name: "Features", href: "#" },
+  { name: "Pricing", href: "#" },
+  { name: "Blog", href: "#" },
+  { name: "Contact", href: "#" },
+];
 export const Headernav = () => {
+  const [mobileOpenMenu, setmobileOpenMenu] = useState(false);
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="bg-white">
       <nav
-        className="flex items-center justify-between p-6 lg:px-8"
-        aria-label="Global">
+        aria-label="Global"
+        className="flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#">
-            <img src={Logos} className="h-8 w-auto" alt="roboticslab logos" />
+          <a href="#" className="-m-1.5 p-1.5">
+            <img src={LogoFull} alt="Roboticslab logo" className="h-8 w-auto" />
           </a>
         </div>
         <div className="flex lg:hidden">
-          <button
+          <Button
             type="button"
-            className="-m-3 inline-flex items-center justify-center rounded-md p-3 text-gray-700">
+            onClick={() => setmobileOpenMenu(true)}
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            variant={"secondary"}>
             <span className="sr-only">Open main menu</span>
-            <img src={Menuicon} alt="menu icon" className="h-6 w-6" />
-          </button>
+            <img src={Menu} alt="Menu icon" className="h-6 w-6" />
+          </Button>
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-8 lg:content-center lg:items-center">
+        <div className="hidden lg:flex lg:gap-x-12">
+          {navigation.map((item) => (
+            <a
+              href={item.href}
+              key={item.name}
+              className="text-md font-medium leading-6 text-gray-900 hover:text-red-600">
+              {item.name}
+            </a>
+          ))}
+        </div>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="#"
-            className="text-sm font-medium leading-6 text-gray-900 hover:text-red-600">
-            Home
-          </a>
-          <a
-            href="#"
-            className="text-sm font-medium leading-6 text-gray-900 hover:text-red-600">
-            Product
-          </a>
-          <div className="relative">
-            <button
-              className="flex items-center gap-x-1 text-sm font-medium leading-6 text-gray-900 hover:text-red-600"
-              type="button"
-              aria-expanded="false">
-              Course
-              <img src="" alt="" />
-            </button>
-            <div className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus-within:outline-none">
-              
-            </div>
-          </div>
-          <a
-            href="#"
-            className="text-sm font-medium leading-6 text-gray-900 hover:text-red-600">
-            Blog
-          </a>
-          <a
-            href="#"
-            className="text-sm font-medium leading-6 text-gray-900 hover:text-red-600">
-            Demo Course
-          </a>
-          <a
-            href="#"
-            className="relative inline-block px-4 py-2 font-medium group">
-            <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-            <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-
-            <span className="relative text-black group-hover:text-white flex gap-2 content-center items-center">
+            href="#_"
+            className="relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group">
+            <span className="absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out bg-red-600 rounded-md group-hover:mt-0 group-hover:ml-0"></span>
+            <span className="absolute inset-0 w-full h-full bg-white rounded-md "></span>
+            <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-red-600 rounded-md opacity-0 group-hover:opacity-100 "></span>
+            <span className="relative text-red-600 transition-colors duration-200 ease-in-out delay-100 group-hover:text-white flex items-center justify-center gap-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -70,11 +61,15 @@ export const Headernav = () => {
                   className="fill-current"
                 />
               </svg>
-              Menejer bilan bo'glanish
+              Administratorga murojjat qilish
             </span>
           </a>
         </div>
       </nav>
+
+      {/* mobile menu */}
+
+     
     </header>
   );
 };

@@ -31,7 +31,7 @@ export const ImageSlider = () => {
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="h-2/6 w-full p-0">
+              <div className="h-48 w-full p-0 md:h-3/4">
                 <Card>
                   <CardContent className="flex h-96 items-center justify-center scroll-smooth md:scroll-auto p-0 rounded-lg overflow-hidden">
                     <img

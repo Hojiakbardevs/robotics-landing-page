@@ -42,7 +42,7 @@ export const Students = () => {
           align: "start",
         }}
         setApi={setcarouselApi}
-        className="w-full max-w-[270px] sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto touch-auto scroll-m-0">
+        className="w-full max-w-[270px] sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto touch-auto scroll-m-0 overscroll-auto focus:overflow-scroll">
         <CarouselContent>
           {videoData.map((video, index) => (
             <CarouselItem
@@ -84,8 +84,8 @@ export const Students = () => {
         ))}
       </div>
       <div className="flex flex-col items-center justify-center lg:flex-row gap-4 mt-10">
-        <Button className="rounded-2xl">Подробнее</Button>
-        <Button className="bg-red-600 rounded-2xl">Записаться на обучение</Button>
+        <Button className="rounded-lg">Подробнее</Button>
+        <Button className="bg-red-600 rounded-lg">Записаться на обучение</Button>
       </div>
     </div>
   );

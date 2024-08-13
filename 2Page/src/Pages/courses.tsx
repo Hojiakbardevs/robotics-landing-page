@@ -86,12 +86,12 @@ export const Courses = () => {
     "Профессии",
   ];
 
-  const filterCoursesByCategory = (category) => {
-    if (category === "Все") {
-      return courses;
-    }
-    return courses.filter((course) => course.category === category);
-  };
+    const filterCoursesByCategory = (category) => {
+      if (category === "Все") {
+        return courses;
+      }
+      return courses.filter((course) => course.category === category);
+    };
 
   return (
     <div className="container">

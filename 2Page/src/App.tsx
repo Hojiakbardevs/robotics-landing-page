@@ -3,6 +3,7 @@ import { Headernav } from "./components/nav_header";
 import { Courses } from "./Pages/courses";
 import { Heading } from "./Pages/header";
 import { Mainhead } from "./Pages/main";
+import { Members } from "./Pages/members";
 import { Students } from "./Pages/students";
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <JobsEnter></JobsEnter>
         <Students></Students>
         <Courses></Courses>
+        <Members></Members>
       </div>
     </>
   );

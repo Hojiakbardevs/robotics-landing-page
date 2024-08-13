@@ -48,7 +48,7 @@ export const FormAbout = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="w-full flex gap-4 items-end mt-10 flex-col lg:flex-row lg:items-end">
+          className="w-full flex gap-4 items-end mt-10 flex-col lg:flex-row lg:items-end sm:p-2">
           <div className="w-full flex gap-4 items-center flex-col lg:flex-row lg:items-center">
             {/* Username Field */}
             <FormField

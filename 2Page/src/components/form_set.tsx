@@ -12,6 +12,15 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
 
 // Define the form schema
 const FormSchema = z.object({
@@ -23,7 +32,7 @@ const FormSchema = z.object({
   }),
 });
 
-export const FormAbout = () => {
+export const FormAbout = ({ textColor = "text-black" }) => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -56,9 +65,11 @@ export const FormAbout = () => {
               name="username"
               render={({ field }) => (
                 <FormItem className="flex flex-col w-full">
-                  <FormLabel className="text-start ml-1 text-md hover:text-red-600">Ism familiya</FormLabel>
+                  <FormLabel className={`text-start ml-1 text-md hover:text-red-600 ${textColor}`}>
+                    Ism familiya
+                  </FormLabel>
                   <FormControl>
-                    <Input placeholder="Ismingiz" {...field}  className="h-12" />
+                    <Input placeholder="Ismingiz" {...field} className="h-12" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -71,15 +82,36 @@ export const FormAbout = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem className="flex flex-col w-full">
-                  <FormLabel  className="text-start ml-1 text-md hover:text-red-600">Telefon raqamingiz</FormLabel>
+                  <FormLabel className={`text-start ml-1 text-md hover:text-red-600 ${textColor}`}>
+                    Telefon raqamingiz
+                  </FormLabel>
                   <FormControl>
-                    <Input placeholder="Telefon raqamingiz" {...field}  className="h-12" />
+                    <Input
+                      placeholder="Telefon raqamingiz"
+                      {...field}
+                      className="h-12"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
           </div>
+          <Select>
+            <SelectTrigger className="w-full h-12 lg:w-[280px]">
+              <SelectValue placeholder="Siz qaysi kursni o'qimoqchisiz" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>Yo'nalishlar</SelectLabel>
+                <SelectItem value="apple">Dizayn</SelectItem>
+                <SelectItem value="banana">C++</SelectItem>
+                <SelectItem value="blueberry">Web dasturlash</SelectItem>
+                <SelectItem value="grapes">English</SelectItem>
+                <SelectItem value="pineapple">Suniy intelekt</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
 
           {/* Submit Button */}
           <Button type="submit" className="bg-red-600 h-12 ">

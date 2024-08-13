@@ -74,7 +74,7 @@ export const Members = () => {
       </h1>
       <div className="container bg-gray-100 p-16 flex flex-wrap justify-center gap-10 my-16 rounded-3xl">
         {membersImages.map((image, index)=>(
-            <img src={image} key={index} alt={`Members ${index + 1}}`} className="w-24 h-24 bg-white rounded-2xl  object-cover" />
+            <img src={image} key={index} alt={`Members ${index + 1}}`} className="w-24 h-24 bg-white rounded-2xl  object-cover hover:scale-110 transition-transform" />
         ))}
       </div>
     </div>

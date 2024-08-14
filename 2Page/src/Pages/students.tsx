@@ -60,9 +60,9 @@ export const Students = () => {
                       muted></video>
                   </CardContent>
                   <CardDescription>
-                    <p className="text-lg font-medium text-black">
+                    <div className="text-lg font-medium text-black">
                       {video.text}
-                    </p>
+                    </div>
                   </CardDescription>
                 </Card>
               </div>

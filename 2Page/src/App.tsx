@@ -1,6 +1,7 @@
 import { JobsEnter } from "./components/jobs";
 import { Headernav } from "./components/nav_header";
 import { Courses } from "./Pages/courses";
+import { Footerss } from "./Pages/footer";
 import { Heading } from "./Pages/header";
 import { Mainhead } from "./Pages/main";
 import { Members } from "./Pages/members";
@@ -22,9 +23,9 @@ function App() {
         <Members></Members>
         <MasterClass></MasterClass>
       </div>
-      <hr />
-      <div className="bg-zinc-100">
-        sdfsfsfdf
+      <hr className="mb-10"/>
+      <div className="bg-white mb-10">
+        <Footerss></Footerss>
       </div>
     </>
   );

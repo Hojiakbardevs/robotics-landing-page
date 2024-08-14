@@ -121,22 +121,22 @@ export const Courses = () => {
               {filterCoursesByCategory(category).map((course) => (
                 <Card key={course.id} className="w-[320px] bg-gray-100 border-none flex flex-col justify-between">
                   <CardHeader>
-                    <p className="text-sm text-gray-600 font-medium">
+                    <div className="text-sm text-gray-600 font-medium">
                       {course.description}
-                    </p>
+                    </div>
                     <h1 className="text-2xl font-semibold text-black">
                       {course.title}
                     </h1>
                   </CardHeader>
                   <CardContent>
-                    <p className="mb-4 bg-white w-fit p-1 px-2 rounded-2xl text-md">
+                    <div className="mb-4 bg-white w-fit p-1 px-2 rounded-2xl text-md">
                       Начало: {course.startDate}
-                    </p>
-                    <p className="mb-4 bg-white w-fit p-1 px-2 rounded-2xl text-md">
+                    </div>
+                    <div className="mb-4 bg-white w-fit p-1 px-2 rounded-2xl text-md">
                       {course.duration}
-                    </p>
+                    </div>
                     <div className="flex justify-between items-end shadow-lg bg-white rounded-lg p-2 py-3">
-                      <p className="flex flex-col font-bold text-md">
+                      <div className="flex flex-col font-bold text-md">
                         <span>{course.price}</span>
                         <span>
                           <span className="text-red-600">
@@ -144,7 +144,7 @@ export const Courses = () => {
                           </span>{" "}
                           в месяц
                         </span>
-                      </p>
+                      </div>
                       <span className="bg-red-600 text-white font-bold rounded-xl px-2">
                         {course.timeLeft}
                       </span>

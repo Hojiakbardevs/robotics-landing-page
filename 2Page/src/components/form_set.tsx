@@ -53,7 +53,7 @@ export const FormAbout = ({ textColor = "text-black" }) => {
   }
 
   return (
-    <div className="container">
+    <div className="container-xl  sm:container ">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -114,7 +114,7 @@ export const FormAbout = ({ textColor = "text-black" }) => {
           </Select>
 
           {/* Submit Button */}
-          <Button type="submit" className="bg-red-600 h-12 ">
+          <Button type="submit" className="bg-red-600 h-12 sm:w-fit w-full ">
             Получить консультацию
           </Button>
         </form>

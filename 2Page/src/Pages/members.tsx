@@ -72,9 +72,9 @@ export const Members = () => {
         Создание собственного приложения с пользователями - «трамплин» к
         гарантированному трудоустройству
       </h1>
-      <div className="container bg-gray-100 p-16 flex flex-wrap justify-center gap-10 my-16 rounded-3xl">
+      <div className="container-xl sm:container bg-gray-100 p-10 flex flex-wrap justify-center gap-10 my-16 rounded-3xl">
         {membersImages.map((image, index)=>(
-            <img src={image} key={index} alt={`Members ${index + 1}}`} className="w-24 h-24 bg-white rounded-2xl  object-cover hover:scale-110 transition-transform" />
+            <img src={image} key={index} alt={`Members ${index + 1}}`} className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-2xl  object-cover hover:scale-110 transition-transform" />
         ))}
       </div>
     </div>

@@ -32,6 +32,7 @@ const navigation = [
   { name: "Pricing", href: "#" },
   { name: "Blog", href: "#" },
   { name: "Contact", href: "#" },
+  { name: "Demo-course", href: "demo_course" },
 ];
 const products = [
   {

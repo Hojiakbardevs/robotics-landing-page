@@ -33,7 +33,7 @@ export const Students = () => {
     carouselApi?.scrollTo(index);
   };
   return (
-    <div className="container my-10">
+    <div className="container-xl sm:container my-10">
       <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-10 text-center mt-20 mb-10">
         Отзывы студентов
       </h1>
@@ -83,9 +83,9 @@ export const Students = () => {
           />
         ))}
       </div>
-      <div className="flex flex-col items-center justify-center lg:flex-row gap-4 mt-10">
-        <Button className="rounded-lg">Подробнее</Button>
-        <Button className="bg-red-600 rounded-lg">Записаться на обучение</Button>
+      <div className="flex flex-col items-center justify-center md:flex-row gap-4 mt-10">
+        <Button className="w-4/5 sm:w-fit rounded-lg">Подробнее</Button>
+        <Button className="w-4/5 sm:w-fit bg-red-600 rounded-lg">Записаться на обучение</Button>
       </div>
     </div>
   );

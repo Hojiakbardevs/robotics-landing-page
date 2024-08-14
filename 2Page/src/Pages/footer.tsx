@@ -31,24 +31,24 @@ const socialMedia = [
 
 export const Footerss = () => {
   return (
-    <div className="container">
-      <div className="flex flex-wrap justify-center gap-14 items-start mb-10">
+    <div className="container-xl sm:container">
+      <div className="flex flex-wrap sm:justify-center gap-10 items-start mb-10 sm:gap-14 ">
        {footerLinks.map((sections, index)=>(
-        <ul key={index} className='max-w-[220px]'>
+        <ul key={index} className='sm:max-w-[220px] max-w-md sm:ml-0 ml-10 text-wrap'>
           <li>
-            <a href="#" className='text-lg font-semibold text-black'>{sections.title}</a>
+            <a href="#" className='sm:text-lg font-semibold text-black text-md'>{sections.title}</a>
           </li>
          {sections.links.map((link, subIndex)=>(
           <li key={subIndex}>
-            <a href="#" className='text-lg font-semibold opacity-80'>{link}</a>
+            <a href="#" className='text-md sm:text-lg font-semibold opacity-80'>{link}</a>
           </li>
          ))}
         </ul>
        ))}
       </div>
       <hr />
-      <div className="flex flex-wrap justify-between gap-10 items-center mt-10">
-        <p className="text-sm font-medium opacity-85">© 2024 nFactorial School</p>
+      <div className="flex flex-wrap justify-between gap-10 items-center mt-10 mx-10">
+        <p className="text-lg font-medium opacity-85">© 2024 Robotics lab School</p>
         <ul className="flex gap-4">
           {socialMedia.map((icon, index)=>(
             <li key={index}>

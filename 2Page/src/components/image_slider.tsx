@@ -26,7 +26,7 @@ export const ImageSlider = () => {
     CaruselImg5,
   ];
   return (
-    <div className="container my-10 rounded-lg">
+    <div className="container rounded-lg mb-10">
       <Carousel
         plugins={[plugin.current]}
         className="w-full"

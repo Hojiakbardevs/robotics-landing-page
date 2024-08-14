@@ -86,7 +86,7 @@ export const Courses = () => {
     "Профессии",
   ];
 
-    const filterCoursesByCategory = (category) => {
+    const filterCoursesByCategory = (category: string) => {
       if (category === "Все") {
         return courses;
       }

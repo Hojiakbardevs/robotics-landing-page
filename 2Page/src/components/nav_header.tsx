@@ -71,10 +71,10 @@ const callsToAction = [
 export const Headernav = () => {
   const [mobileOpenMenu, setmobileOpenMenu] = useState(false);
   return (
-    <header id="logos" >
+    <header id="logos" className=" bg-white shadow-sm" >
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-6 lg:px-8 bg-white shadow-sm">
+        className="container flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <img src={LogoFull} alt="Roboticslab logo" className="h-8 w-auto" />

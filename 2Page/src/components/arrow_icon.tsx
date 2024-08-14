@@ -3,8 +3,8 @@ import React from "react";
 
 const ArrowIcon: React.FC = () => {
   return (
-    <div className="fixed bottom-[80px] right-[16px] z-[1] flex-none h-[60px] w-[60px]">
-      <a href="#logos" className="animate-accordion-up">
+    <div className="fixed bottom-5 right-2 z-[1] flex-none h-[60px] w-[60px] sm:bottom-20 sm:right-10">
+      <a href="#logos" className="animate-accordion-up transition-transform">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"

@@ -33,7 +33,7 @@ export const Mainhead = () => {
      {cardDescription.map((card, index) => (
         <Card
           key={index}
-          className={`w-[310px] h-[210px] rounded-3xl text-white p-8 ${card.active ? "bg-red-600" : "bg-gray-100 text-black"}`}
+          className={`w-[310px] h-[210px] rounded-3xl text-white p-8 hover:scale-110 transition-transform ${card.active ? "bg-red-600" : "bg-gray-100 text-black"}`}
         >
           <CardHeader className="p-0 flex flex-col gap-2">
             <CardTitle className="text-5xl font-semibold">{card.digit}</CardTitle>

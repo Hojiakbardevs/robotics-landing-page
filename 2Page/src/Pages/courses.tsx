@@ -119,7 +119,7 @@ export const Courses = () => {
           {categories.map((category, index) => (
             <TabPanel key={index} className={`flex flex-wrap justify-center gap-8 my-10`}>
               {filterCoursesByCategory(category).map((course) => (
-                <Card key={course.id} className="w-[320px] bg-gray-100 border-none flex flex-col justify-between">
+                <Card key={course.id} className="w-[320px] bg-gray-100 border-none flex flex-col justify-between hover:scale-110 transition-transform">
                   <CardHeader>
                     <div className="text-sm text-gray-600 font-medium">
                       {course.description}

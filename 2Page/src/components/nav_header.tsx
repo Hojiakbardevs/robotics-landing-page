@@ -1,8 +1,28 @@
 import LogoFull from "@/assets/img/logofull.svg";
 import { Button } from "./ui/button";
 import { useState } from "react";
-import { Dialog, DialogPanel, Popover, PopoverButton, PopoverGroup, PopoverPanel } from "@headlessui/react";
-import { ArrowPathIcon, Bars3BottomRightIcon, ChartPieIcon, ChevronDownIcon, CursorArrowRaysIcon, FingerPrintIcon, PhoneIcon, SquaresPlusIcon, XMarkIcon } from "@heroicons/react/16/solid";
+import {
+  Dialog,
+  DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+} from "@headlessui/react";
+import {
+  ArrowPathIcon,
+  Bars3BottomRightIcon,
+  ChartPieIcon,
+  ChevronDownIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  PhoneIcon,
+  SquaresPlusIcon,
+  XMarkIcon,
+} from "@heroicons/react/16/solid";
 import { PlayCircleIcon } from "lucide-react";
 
 const navigation = [
@@ -13,20 +33,45 @@ const navigation = [
   { name: "Contact", href: "#" },
 ];
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Dasturlash', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Kiberxavsizlik', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Dizayn', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'English', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
+  {
+    name: "Analytics",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Dasturlash",
+    description: "Speak directly to your customers",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Kiberxavsizlik",
+    description: "Your customers’ data will be safe and secure",
+    href: "#",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Dizayn",
+    description: "Connect with third-party tools",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "English",
+    description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+];
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
+  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
+  { name: "Contact sales", href: "#", icon: PhoneIcon },
+];
 export const Headernav = () => {
   const [mobileOpenMenu, setmobileOpenMenu] = useState(false);
   return (
-    <header>
+    <header id="logos" >
       <nav
         aria-label="Global"
         className="flex items-center justify-between p-6 lg:px-8 bg-white shadow-sm">
@@ -48,32 +93,36 @@ export const Headernav = () => {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative flex items-center gap-x-6">
-          {navigation.map((item) => (
-            <a
-              href={item.href}
-              key={item.name}
-              className="text-md font-medium leading-6 text-gray-900 hover:text-red-600">
-              {item.name}
-            </a>
-          ))}
-          <PopoverButton className="flex items-center gap-x-1 text-md font-medium leading-6 text-gray-900 hover:text-red-600">Courses
-            <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+            {navigation.map((item) => (
+              <a
+                href={item.href}
+                key={item.name}
+                className="text-md font-medium leading-6 text-gray-900 hover:text-red-600">
+                {item.name}
+              </a>
+            ))}
+            <PopoverButton className="flex items-center gap-x-1 text-md font-medium leading-6 text-gray-900 hover:text-red-600">
+              Courses
+              <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
             </PopoverButton>
             <PopoverPanel
               transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-            >
+              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
               <div className="p-4">
                 {products.map((item) => (
                   <div
                     key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-                  >
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600 group-hover:text-red-600" />
+                      <item.icon
+                        aria-hidden="true"
+                        className="h-6 w-6 text-gray-600 group-hover:text-red-600"
+                      />
                     </div>
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900">
+                      <a
+                        href={item.href}
+                        className="block font-semibold text-gray-900">
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
@@ -87,17 +136,16 @@ export const Headernav = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                  >
-                    <item.icon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
+                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+                    <item.icon
+                      aria-hidden="true"
+                      className="h-5 w-5 flex-none text-gray-400"
+                    />
                     {item.name}
                   </a>
                 ))}
               </div>
             </PopoverPanel>
-            
-          
-          
           </Popover>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -152,6 +200,26 @@ export const Headernav = () => {
                       {item.name}
                     </a>
                   ))}
+                  <Disclosure as="div" className="-mx-3">
+                    <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      Product
+                      <ChevronDownIcon
+                        aria-hidden="true"
+                        className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+                      />
+                    </DisclosureButton>
+                    <DisclosurePanel className="mt-2 space-y-2">
+                      {[...products, ...callsToAction].map((item) => (
+                        <DisclosureButton
+                          key={item.name}
+                          as="a"
+                          href={item.href}
+                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                          {item.name}
+                        </DisclosureButton>
+                      ))}
+                    </DisclosurePanel>
+                  </Disclosure>
                   <div className="py-6">
                     <a
                       href="#_"

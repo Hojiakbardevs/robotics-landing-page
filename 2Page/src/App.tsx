@@ -1,3 +1,5 @@
+
+import ArrowIcon from "./components/arrow_icon";
 import { JobsEnter } from "./components/jobs";
 import { Headernav } from "./components/nav_header";
 import { Courses } from "./Pages/courses";
@@ -10,6 +12,7 @@ import { Students } from "./Pages/students";
 function App() {
   return (
     <>
+      <ArrowIcon></ArrowIcon>
       <div className="bg-zinc-100">
         <Headernav></Headernav>
         <hr />
@@ -23,7 +26,7 @@ function App() {
         <Members></Members>
         <MasterClass></MasterClass>
       </div>
-      <hr className="mb-10"/>
+      <hr className="mb-10" />
       <div className="bg-white mb-10">
         <Footerss></Footerss>
       </div>

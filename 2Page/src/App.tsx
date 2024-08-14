@@ -12,7 +12,6 @@ import { Students } from "./Pages/students";
 function App() {
   return (
     <>
-      <ArrowIcon></ArrowIcon>
       <div className="bg-zinc-100">
         <Headernav></Headernav>
         <hr />
@@ -30,6 +29,7 @@ function App() {
       <div className="bg-white mb-10">
         <Footerss></Footerss>
       </div>
+      <ArrowIcon></ArrowIcon>
     </>
   );
 }

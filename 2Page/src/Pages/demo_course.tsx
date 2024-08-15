@@ -1,6 +1,9 @@
 import { SimpleForm } from "@/components/form_demo";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import DayIcon from "@/assets/icons/day_icon.png";
+import DayIcob from "@/assets/icons/day_icon1.png";
+import DayIcom from "@/assets/icons/day_icon2.png";
+import { Faq } from "@/components/faq";
 
 export const DemoCourse = () => {
   return (
@@ -34,6 +37,118 @@ export const DemoCourse = () => {
           </h1>
           <SimpleForm></SimpleForm>
         </div>
+      </div>
+      <div className="bg-zinc-100   min-h-screen w-full flex flex-col justify-center items-center py-20">
+        <div className="sm:container mx-auto  flex justify-center items-center text-center gap-20 sm:flex-row flex-col">
+          <h1 className="text-3xl basis-1/3 font-bold tracking-tight text-black md:text-5xl leading-10 ">
+            Как может выглядеть ваше расписание в Roboticslab school
+          </h1>
+          <div className="flex flex-col basis-2/3 gap-10 m-5">
+            {/* hafta kunlarini to'ldiriliadi */}
+            <div className="flex md:basis-2/3 items-center bg-white hover:scale-110 transition-transform hover:shadow-xl duration-300 p-6 rounded-3xl sm:flex-row flex-col gap-10">
+              <div className="sm:basis-1/4">
+                <img
+                  src={DayIcon}
+                  alt="day icon"
+                  className="border-2 rounded-[30px] border-solid border-red-500 size-32"
+                />
+              </div>
+              <div className="sm:basis-2/3 text-start">
+                <h2 className="text-2xl font-semibold tracking-wide leading-10 text-wrap">
+                  Понедельник I c 19:00 до 20:30-21:00
+                </h2>
+                <p className="text-lg text-start">
+                  Стартуем с предзаписанных лекций, где вы погрузитесь в теорию,
+                  имея возможность задать вопрос в моменте нашему ментору в
+                  чате.
+                </p>
+              </div>
+            </div>
+            {/* 1 */}
+            <div className="flex md:basis-2/3 items-center bg-white hover:scale-110 transition-transform hover:shadow-xl duration-300 p-6 rounded-3xl sm:flex-row flex-col gap-10">
+              <div className="sm:basis-1/4">
+                <img
+                  src={DayIcob}
+                  alt="day icon"
+                  className="border-2 rounded-[30px] border-solid border-red-500 size-32"
+                />
+              </div>
+              <div className="sm:basis-2/3 text-start">
+                <h2 className="text-2xl font-semibold tracking-wide leading-10 text-wrap">
+                  Понедельник I c 19:00 до 20:30-21:00
+                </h2>
+                <p className="text-lg text-start">
+                  Стартуем с предзаписанных лекций, где вы погрузитесь в теорию,
+                  имея возможность задать вопрос в моменте нашему ментору в
+                  чате.
+                </p>
+              </div>
+            </div>
+            {/* s */}
+            <div className="flex md:basis-2/3 items-center bg-white hover:scale-110 transition-transform hover:shadow-xl duration-300 p-6 rounded-3xl sm:flex-row flex-col gap-10">
+              <div className="sm:basis-1/4">
+                <img
+                  src={DayIcon}
+                  alt="day icon"
+                  className="border-2 rounded-[30px] border-solid border-red-500 size-32"
+                />
+              </div>
+              <div className="sm:basis-2/3 text-start">
+                <h2 className="text-2xl font-semibold tracking-wide leading-10 text-wrap">
+                  Понедельник I c 19:00 до 20:30-21:00
+                </h2>
+                <p className="text-lg text-start">
+                  Стартуем с предзаписанных лекций, где вы погрузитесь в теорию,
+                  имея возможность задать вопрос в моменте нашему ментору в
+                  чате.
+                </p>
+              </div>
+            </div>
+            {/* 1 */}
+            <div className="flex md:basis-2/3 items-center bg-white hover:scale-110 transition-transform hover:shadow-xl duration-300 p-6 rounded-3xl sm:flex-row flex-col gap-10">
+              <div className="sm:basis-1/4">
+                <img
+                  src={DayIcob}
+                  alt="day icon"
+                  className="border-2 rounded-[30px] border-solid border-red-500 size-32"
+                />
+              </div>
+              <div className="sm:basis-2/3 text-start">
+                <h2 className="text-2xl font-semibold tracking-wide leading-10 text-wrap">
+                  Понедельник I c 19:00 до 20:30-21:00
+                </h2>
+                <p className="text-lg text-start">
+                  Стартуем с предзаписанных лекций, где вы погрузитесь в теорию,
+                  имея возможность задать вопрос в моменте нашему ментору в
+                  чате.
+                </p>
+              </div>
+            </div>
+            {/* 2 */}
+            <div className="flex md:basis-2/3 items-center bg-white hover:scale-110 transition-transform hover:shadow-xl duration-300 p-6 rounded-3xl sm:flex-row flex-col gap-10">
+              <div className="sm:basis-1/4">
+                <img
+                  src={DayIcom}
+                  alt="day icon"
+                  className="border-2 rounded-[30px] border-solid border-red-500 size-32"
+                />
+              </div>
+              <div className="sm:basis-2/3 text-start">
+                <h2 className="text-2xl font-semibold tracking-wide leading-10 text-wrap">
+                  Понедельник I c 19:00 до 20:30-21:00
+                </h2>
+                <p className="text-lg text-start">
+                  Стартуем с предзаписанных лекций, где вы погрузитесь в теорию,
+                  имея возможность задать вопрос в моменте нашему ментору в
+                  чате.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <Faq></Faq>
       </div>
     </div>
   );

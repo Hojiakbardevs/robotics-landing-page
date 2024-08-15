@@ -100,12 +100,12 @@ export const Headernav = () => {
               <NavLink
                 to={item.href}
                 key={item.name}
-                className="text-md font-medium leading-6 text-gray-900 hover:text-red-600">
+                className="text-lg font-medium leading-6 text-gray-900 hover:text-red-600">
                 {item.name}
               </NavLink>
             ))}
 
-            <PopoverButton className="flex items-center gap-x-1 text-md font-medium leading-6 text-gray-900 hover:text-red-600">
+            <PopoverButton className="flex items-center gap-x-1 text-lg font-medium leading-6 text-gray-900 hover:text-red-600">
               <NavLink to="/courses_details">Courses</NavLink>
               <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
             </PopoverButton>

@@ -1,5 +1,5 @@
 import LogoFull from "@/assets/img/logofull.svg";
-import Calls from "@/assets/icons/calls.svg"
+import Calls from "@/assets/icons/calls.svg";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import {
@@ -25,14 +25,15 @@ import {
   XMarkIcon,
 } from "@heroicons/react/16/solid";
 import { PlayCircleIcon } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Pricing", href: "#" },
-  { name: "Blog", href: "#" },
-  { name: "Contact", href: "#" },
-  { name: "Demo-course", href: "demo_course" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about_page" },
+  { name: "Demo-course", href: "/demo_course" },
+  { name: "Blog", href: "/blog_pages" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Contact", href: "/contact" },
 ];
 const products = [
   {
@@ -73,14 +74,14 @@ const callsToAction = [
 export const Headernav = () => {
   const [mobileOpenMenu, setmobileOpenMenu] = useState(false);
   return (
-    <header id="logos" className=" bg-white shadow-sm" >
+    <header id="logos" className=" bg-white shadow-sm">
       <nav
         aria-label="Global"
         className="container flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <NavLink to="/" className="-m-1.5 p-1.5">
             <img src={LogoFull} alt="Roboticslab logo" className="h-8 w-auto" />
-          </a>
+          </NavLink>
         </div>
         <div className="flex lg:hidden">
           <Button
@@ -96,12 +97,12 @@ export const Headernav = () => {
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative flex items-center gap-x-6">
             {navigation.map((item) => (
-              <a
-                href={item.href}
+              <NavLink
+                to={item.href}
                 key={item.name}
                 className="text-md font-medium leading-6 text-gray-900 hover:text-red-600">
                 {item.name}
-              </a>
+              </NavLink>
             ))}
             <PopoverButton className="flex items-center gap-x-1 text-md font-medium leading-6 text-gray-900 hover:text-red-600">
               Courses
@@ -151,12 +152,12 @@ export const Headernav = () => {
           </Popover>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="#_"
+          <NavLink
+            to="/contact"
             className="flex content-center items-center gap-2 font-medium bg-black text-white px-5 py-2 rounded-lg hover:bg-red-600 ">
             <img src={Calls} alt="call icon" />
             Murojjat qiling
-          </a>
+          </NavLink>
         </div>
       </nav>
 
@@ -185,12 +186,12 @@ export const Headernav = () => {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <NavLink
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-red-600">
                       {item.name}
-                    </a>
+                    </NavLink>
                   ))}
                   <Disclosure as="div" className="-mx-3">
                     <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
@@ -213,12 +214,12 @@ export const Headernav = () => {
                     </DisclosurePanel>
                   </Disclosure>
                   <div className="py-6">
-                    <a
-                      href="#_"
+                    <NavLink
+                      to="/contact"
                       className="flex justify-center items-center gap-2 font-medium bg-black text-white px-5 py-2 rounded-lg hover:bg-red-600 ">
-                     <img src={Calls} alt = "Calls icon"/>
+                      <img src={Calls} alt="Calls icon" />
                       Murojjat qiling
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>

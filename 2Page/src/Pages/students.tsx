@@ -15,6 +15,7 @@ import Video5 from "@/assets/video/5.mp4";
 import Video6 from "@/assets/video/6.mp4";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { NavLink } from "react-router-dom";
 
 const videoData = [
   { src: Video1, text: "Roboticslab" },
@@ -84,8 +85,14 @@ export const Students = () => {
         ))}
       </div>
       <div className="flex flex-col items-center justify-center md:flex-row gap-4 mt-10">
-        <Button className="w-4/5 sm:w-fit rounded-lg">Подробнее</Button>
-        <Button className="w-4/5 sm:w-fit bg-red-600 rounded-lg">Записаться на обучение</Button>
+        <NavLink to="/details" className="w-4/5 sm:w-fit">
+          <Button className="w-full rounded-lg">Подробнее</Button>
+        </NavLink>
+        <NavLink to="/enroll" className="w-4/5 sm:w-fit">
+          <Button className="w-full bg-red-600 rounded-lg">
+            Записаться на обучение
+          </Button>
+        </NavLink>
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ import { Pricing } from "./Pages/pricing";
 import { Contact } from "./Pages/contact";
 import { DetailsPage } from "./Pages/details_page";
 import { EnrollPage } from "./Pages/enroll_page";
+import { CoursesPages } from "./Pages/courses_pages";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/blog_pages" element={<BlogPages />}></Route>
         <Route path="pricing" element={<Pricing />}></Route>
         <Route path="contact" element={<Contact />}></Route>
+        <Route path="/courses_details" element={<CoursesPages />}/>
         <Route path="*" element={<PageNotFound />} />
         <Route path="/details" element={<DetailsPage />} />
         <Route path="/enroll" element={<EnrollPage />} />

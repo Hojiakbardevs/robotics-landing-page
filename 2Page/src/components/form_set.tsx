@@ -11,7 +11,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { toast } from "@/components/ui/use-toast";
 import {
   Select,
   SelectContent,
@@ -21,6 +20,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
+import { useToast } from "./ui/use-toast";
+import { ToastAction } from "./ui/toast";
 
 // Define the form schema
 const FormSchema = z.object({
@@ -41,19 +42,40 @@ export const FormAbout = ({ textColor = "text-black" }) => {
     },
   });
 
+  const { toast } = useToast();
+
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    });
+    console.log("Form submitted:", data); // Debugging
+
+    // Check if data already exists in localStorage
+    const existingData = JSON.parse(localStorage.getItem("formData") || "[]");
+
+    const isDuplicate = existingData.some(
+      (entry: any) =>
+        entry.username === data.username && entry.phone === data.phone
+    );
+
+    if (!isDuplicate) {
+      // Save to localStorage
+      localStorage.setItem("formData", JSON.stringify([...existingData, data]));
+
+      // Show toast notification
+      toast({
+        title: "Hozir siz ro'yhatdan o'tdingiz",
+        description: "Friday, February 10, 2023 at 5:00 PM",
+        action: <ToastAction altText="Try again">Try again</ToastAction>,
+      });
+    } else {
+      toast({
+        title: "Duplicate entry",
+        description: "This data already exists.",
+        action: <ToastAction altText="Try again">Try again</ToastAction>,
+      });
+    }
   }
 
   return (
-    <div className="container-xl  sm:container ">
+    <div className="container-xl sm:container">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -65,7 +87,8 @@ export const FormAbout = ({ textColor = "text-black" }) => {
               name="username"
               render={({ field }) => (
                 <FormItem className="flex flex-col w-full">
-                  <FormLabel className={`text-start ml-1 text-md hover:text-red-600 ${textColor}`}>
+                  <FormLabel
+                    className={`text-start ml-1 text-md hover:text-red-600 ${textColor}`}>
                     Ism familiya
                   </FormLabel>
                   <FormControl>
@@ -82,7 +105,8 @@ export const FormAbout = ({ textColor = "text-black" }) => {
               name="phone"
               render={({ field }) => (
                 <FormItem className="flex flex-col w-full">
-                  <FormLabel className={`text-start ml-1 text-md hover:text-red-600 ${textColor}`}>
+                  <FormLabel
+                    className={`text-start ml-1 text-md hover:text-red-600 ${textColor}`}>
                     Telefon raqamingiz
                   </FormLabel>
                   <FormControl>
@@ -104,17 +128,20 @@ export const FormAbout = ({ textColor = "text-black" }) => {
             <SelectContent>
               <SelectGroup>
                 <SelectLabel>Yo'nalishlar</SelectLabel>
-                <SelectItem value="apple">Dizayn</SelectItem>
-                <SelectItem value="banana">C++</SelectItem>
-                <SelectItem value="blueberry">Web dasturlash</SelectItem>
-                <SelectItem value="grapes">English</SelectItem>
-                <SelectItem value="pineapple">Suniy intelekt</SelectItem>
+                <SelectItem value="dizayn">Dizayn</SelectItem>
+                <SelectItem value="cpp">C++</SelectItem>
+                <SelectItem value="web">Web dasturlash</SelectItem>
+                <SelectItem value="english">English</SelectItem>
+                <SelectItem value="ai">Suniy intelekt</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
 
           {/* Submit Button */}
-          <Button type="submit" className="bg-red-600 h-12 sm:w-fit w-full ">
+          <Button
+            type="submit"
+            className="bg-red-600 h-12 sm:w-fit w-full"
+            onClick={form.handleSubmit(onSubmit)}>
             Получить консультацию
           </Button>
         </form>

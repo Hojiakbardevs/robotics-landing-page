@@ -104,10 +104,12 @@ export const Headernav = () => {
                 {item.name}
               </NavLink>
             ))}
+
             <PopoverButton className="flex items-center gap-x-1 text-md font-medium leading-6 text-gray-900 hover:text-red-600">
-              Courses
+              <NavLink to="/courses_details">Courses</NavLink>
               <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
             </PopoverButton>
+
             <PopoverPanel
               transition
               className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">

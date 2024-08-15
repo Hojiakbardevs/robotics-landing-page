@@ -1,10 +1,10 @@
 import { JobsEnter } from "@/components/jobs";
-import { Heading } from "./header";
-import { Mainhead } from "./main";
-import { Students } from "./students";
-import { Courses } from "./courses";
-import { Members } from "./members";
-import { MasterClass } from "./mester_class";
+import { Heading } from "../components/header";
+import { Mainhead } from "../components/main";
+import { Students } from "../components/students";
+import { Courses } from "../components/courses";
+import { Members } from "../components/members";
+import { MasterClass } from "../components/mester_class";
 
 export const Home = () => {
   return (

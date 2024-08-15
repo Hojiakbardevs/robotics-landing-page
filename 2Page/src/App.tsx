@@ -3,7 +3,7 @@ import { Headernav } from "./components/nav_header";
 import { AboutPage } from "./Pages/about_page";
 import { BlogPages } from "./Pages/blog_pages";
 import { DemoCourse } from "./Pages/demo_course";
-import { Footerss } from "./Pages/footer";
+import { Footerss } from "./components/footer";
 import { Home } from "./Pages/home";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { PageNotFound } from "./Pages/page_not_found";

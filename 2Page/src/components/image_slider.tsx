@@ -16,7 +16,7 @@ import CaruselImg5 from "@/assets/img/carusel/image5.png";
 
 export const ImageSlider = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 2400, stopOnInteraction: true })
   );
   const images = [
     CaruselImg1,
@@ -27,11 +27,7 @@ export const ImageSlider = () => {
   ];
   return (
     <div className="container rounded-lg mb-10">
-      <Carousel
-        plugins={[plugin.current]}
-        className="w-full"
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}>
+      <Carousel plugins={[plugin.current]} className="w-full">
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>

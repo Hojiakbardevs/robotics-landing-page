@@ -227,7 +227,19 @@ const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollNext, canScrollNext } = useCarousel()
+  const { orientation, api, scrollNext, canScrollNext } = useCarousel();
+
+  const handleNextClick = () => {
+    if (api) {
+      if (api.selectedScrollSnap() === api.scrollSnapList().length - 1) {
+        // If the current slide is the last one, scroll to the first slide
+        api.scrollTo(0);
+      } else {
+        // Otherwise, scroll to the next slide
+        scrollNext();
+      }
+    }
+  };
 
   return (
     <Button
@@ -242,15 +254,16 @@ const CarouselNext = React.forwardRef<
         className
       )}
       disabled={!canScrollNext}
-      onClick={scrollNext}
+      onClick={handleNextClick} // Use the custom click handler
       {...props}
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
     </Button>
-  )
-})
-CarouselNext.displayName = "CarouselNext"
+  );
+});
+CarouselNext.displayName = "CarouselNext";
+
 
 export {
   type CarouselApi,

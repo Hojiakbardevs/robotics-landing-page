@@ -80,7 +80,7 @@ export const Headernav = () => {
         className="container flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <NavLink to="/" className="-m-1.5 p-1.5">
-            <img src={LogoFull} alt="Roboticslab logo" className="h-8 w-auto" />
+            <img src={LogoFull} alt="Roboticslab logo" />
           </NavLink>
         </div>
         <div className="flex lg:hidden">

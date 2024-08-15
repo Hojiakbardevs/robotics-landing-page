@@ -9,7 +9,7 @@ export const MasterClass = () => {
         Следующий мастеркласс
       </h1>
       <div className="container bg-gray-100 p-16 flex flex-wrap justify-between items-end gap-20  rounded-3xl lg:w-lg hover:scale-110 transition-transform">
-        <img src={MasterClasImg} alt="book course" className="w-full sm:w-28 h-auto " />
+        <img src={MasterClasImg} alt="book course" className="w-28" />
         <div className="grow">
           <p className="text-2xl sm:text-3xl font-semibold mb-4">Пробный урок по Android-разработке</p>
           <p className="text-2xl sm:text-3xl font-semibold mb-4">Данияр Амангельды</p>
@@ -18,7 +18,7 @@ export const MasterClass = () => {
         <Button className="bg-red-600 w-60 ">Подробнее</Button>
       </div>
       <div className="container bg-gray-100 p-16 flex flex-wrap justify-between items-end gap-20  my-10 rounded-3xl lg:w-lg hover:scale-110 transition-transform">
-        <img src={MasterClasImg} alt="book course" className="w-full sm:w-28 h-auto " />
+        <img src={MasterClasImg} alt="book course" className="w-28" />
         <div className="grow">
           <p className="text-2xl sm:text-3xl font-semibold mb-4">Пробный урок по Android-разработке</p>
           <p className="text-2xl sm:text-3xl font-semibold mb-4">Данияр Амангельды</p>

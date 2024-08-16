@@ -43,22 +43,20 @@ export const Students = () => {
           align: "start",
         }}
         setApi={setcarouselApi}
-        className="w-full max-w-[270px] sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto touch-auto scroll-m-0 overscroll-auto focus:overflow-scroll">
+        className="w-full max-w-[270px] sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto">
         <CarouselContent>
           {videoData.map((video, index) => (
             <CarouselItem
               key={index}
-              className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 scroll-m-0">
+              className="md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
                 <Card>
-                  <CardContent className="flex aspect-square items-center justify-center scroll-smooth md:scroll-auto p-0 rounded-lg">
+                  <CardContent className="flex aspect-square items-center justify-center scroll-smooth md:scroll-auto p-0">
                     <video
                       src={video.src}
                       controls
                       className="h-full w-full object-cover"
-                      autoPlay
-                      loop
-                      muted></video>
+                      loop></video>
                   </CardContent>
                   <CardDescription>
                     <div className="text-lg font-medium text-black">

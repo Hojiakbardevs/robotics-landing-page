@@ -5,8 +5,7 @@ export const AboutPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a loading delay
-    const timer = setTimeout(() => setLoading(false), 1000); // 2 seconds delay
+    const timer = setTimeout(() => setLoading(false), 1000); 
     return () => clearTimeout(timer);
   }, []);
 
@@ -15,8 +14,7 @@ export const AboutPage = () => {
       <div className="container">
         {loading ? (
           <div>
-            <Skeleton className="h-16 w-full mb-10 bg-gray-200" /> // Skeleton
-            for the heading
+            <Skeleton className="h-16 w-full mb-10 bg-gray-200" /> 
             <div className="flex flex-col space-y-3">
               <Skeleton className="h-[125px] w-[250px] rounded-xl bg-gray-200" />
               <div className="space-y-2">

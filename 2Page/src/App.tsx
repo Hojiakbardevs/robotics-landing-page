@@ -24,7 +24,6 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-
   return (
     <BrowserRouter>
       {loading ? (

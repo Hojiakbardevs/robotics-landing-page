@@ -15,8 +15,6 @@ import { EnrollPage } from "./Pages/enroll_page";
 import { CoursesPages } from "./Pages/courses_pages";
 import Logos from "./assets/img/logofull.svg"; // Ensure the path is correct
 import BubbleAnimation from "./components/buble_animation";
-import TypingEffect from "./components/type_effect";
-
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -37,10 +35,7 @@ function App() {
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-10 text-center">
             O'quv markaziga hush kelibsiz
           </h1>
-          <TypingEffect
-            textArray={["markaz"]}
-            elementId="typing-effect-heading"
-          />
+
           <BubbleAnimation></BubbleAnimation>
         </div>
       ) : (

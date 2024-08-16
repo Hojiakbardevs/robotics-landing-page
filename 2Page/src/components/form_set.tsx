@@ -88,11 +88,11 @@ export const FormAbout = ({ textColor = "text-black" }) => {
               render={({ field }) => (
                 <FormItem className="flex flex-col w-full">
                   <FormLabel
-                    className={`text-start ml-1 text-md hover:text-red-600 ${textColor}`}>
+                    className={`text-start ml-1 text-lg hover:text-red-600 ${textColor}`}>
                     Ism familiya
                   </FormLabel>
                   <FormControl>
-                    <Input placeholder="Ismingiz" {...field} className="h-12" />
+                    <Input placeholder="Ismingiz" {...field} className="h-12 text-lg" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -106,14 +106,14 @@ export const FormAbout = ({ textColor = "text-black" }) => {
               render={({ field }) => (
                 <FormItem className="flex flex-col w-full">
                   <FormLabel
-                    className={`text-start ml-1 text-md hover:text-red-600 ${textColor}`}>
+                    className={`text-start ml-1 text-lg hover:text-red-600 ${textColor}`}>
                     Telefon raqamingiz
                   </FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Telefon raqamingiz"
                       {...field}
-                      className="h-12"
+                      className="h-12 text-lg"
                     />
                   </FormControl>
                   <FormMessage />
@@ -122,17 +122,17 @@ export const FormAbout = ({ textColor = "text-black" }) => {
             />
           </div>
           <Select>
-            <SelectTrigger className="w-full h-12 lg:w-[280px]">
+            <SelectTrigger className="w-full h-12 lg:w-[300px] text-lg">
               <SelectValue placeholder="Siz qaysi kursni o'qimoqchisiz" />
             </SelectTrigger>
             <SelectContent>
-              <SelectGroup>
-                <SelectLabel>Yo'nalishlar</SelectLabel>
-                <SelectItem value="dizayn">Dizayn</SelectItem>
-                <SelectItem value="cpp">C++</SelectItem>
-                <SelectItem value="web">Web dasturlash</SelectItem>
-                <SelectItem value="english">English</SelectItem>
-                <SelectItem value="ai">Suniy intelekt</SelectItem>
+              <SelectGroup className="text-lg">
+                <SelectLabel className="text-lg">Yo'nalishlar</SelectLabel>
+                <SelectItem className="text-lg" value="dizayn">Dizayn</SelectItem>
+                <SelectItem className="text-lg" value="cpp">C++</SelectItem>
+                <SelectItem className="text-lg" value="web">Web dasturlash</SelectItem>
+                <SelectItem className="text-lg" value="english">English</SelectItem>
+                <SelectItem className="text-lg" value="ai">Suniy intelekt</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
@@ -140,7 +140,7 @@ export const FormAbout = ({ textColor = "text-black" }) => {
           {/* Submit Button */}
           <Button
             type="submit"
-            className="bg-red-600 h-12 sm:w-fit w-full"
+            className="bg-red-600 h-12 sm:w-fit w-full text-lg"
             onClick={form.handleSubmit(onSubmit)}>
             Получить консультацию
           </Button>

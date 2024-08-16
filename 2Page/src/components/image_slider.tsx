@@ -26,16 +26,16 @@ export const ImageSlider = () => {
 
   // Simulate image loading
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000); // Set loading to false after 2 seconds
+    const timer = setTimeout(() => setLoading(false), 3000); // Set loading to false after 2 seconds
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="container rounded-lg mb-10">
       {loading ? (
-        <Skeleton />
+        <Skeleton className="h-48 w-full p-0 bg-gray-200"/>
       ) : (
-        <Carousel plugins={[plugin.current]} className="w-full">
+        <Carousel plugins={[plugin.current]} className="w-full shadow-lg rounded-3xl">
           <CarouselContent>
             {images.map((image, index) => (
               <CarouselItem key={index}>

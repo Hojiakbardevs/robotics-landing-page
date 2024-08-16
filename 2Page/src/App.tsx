@@ -20,7 +20,7 @@ function App() {
 
   // Simulate loading time (you can replace this with actual data fetching)
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 10000);
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 

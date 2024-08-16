@@ -85,3 +85,21 @@
 .animate-move-up {
   animation: move-up 0.8s ease-in-out infinite;
 }
+/* styles.css or your global CSS file */
+.cursor {
+  display: inline-block;
+  width: 0.75rem; /* Adjust as needed */
+  height: 1rem; /* Adjust as needed */
+  background-color: #333; /* Adjust as needed */
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.typing {
+  animation: blink 1s step-end infinite;
+}

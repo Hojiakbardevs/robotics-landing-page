@@ -28,9 +28,12 @@ const BubbleAnimation: React.FC = () => {
 
   // Function to create a new bubble
   const createBubble = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
     const bubble: Bubble = {
-      x: Math.random() * canvasRef.current!.width,
-      y: canvasRef.current!.height + Math.random() * 100,
+      x: Math.random() * canvas.width,
+      y: canvas.height + Math.random() * 100,
       radius: Math.random() * 5 + 2,
       speed: Math.random() * 1 + 0.5,
       oscillationAmplitude: Math.random() * 20 + 10,
@@ -52,8 +55,12 @@ const BubbleAnimation: React.FC = () => {
   };
 
   // Function to update the bubbles
-  const updateBubbles = (ctx: CanvasRenderingContext2D) => {
-    ctx.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
+  const updateBubbles = () => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext('2d');
+    if (!canvas || !ctx) return;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     for (let i = 0; i < bubbles.length; i++) {
       const bubble = bubbles[i];
@@ -73,7 +80,7 @@ const BubbleAnimation: React.FC = () => {
       createBubble();
     }
 
-    requestAnimationFrame(() => updateBubbles(ctx));
+    requestAnimationFrame(updateBubbles);
   };
 
   // Effect to handle canvas setup and animation
@@ -92,7 +99,7 @@ const BubbleAnimation: React.FC = () => {
     resizeCanvas();
 
     // Start the animation
-    updateBubbles(ctx);
+    updateBubbles();
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);

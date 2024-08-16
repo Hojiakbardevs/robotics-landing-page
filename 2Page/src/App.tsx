@@ -15,15 +15,17 @@ import { EnrollPage } from "./Pages/enroll_page";
 import { CoursesPages } from "./Pages/courses_pages";
 import Logos from "./assets/img/logofull.svg"; // Ensure the path is correct
 import BubbleAnimation from "./components/buble_animation";
+import TypingEffect from "./components/type_effect";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   // Simulate loading time (you can replace this with actual data fetching)
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
+    const timer = setTimeout(() => setLoading(false), 10000);
     return () => clearTimeout(timer);
   }, []);
+
 
   return (
     <BrowserRouter>
@@ -31,7 +33,14 @@ function App() {
         <div className="container mx-auto p-4 w-screen h-screen flex gap-10 justify-center items-center flex-col">
           <h1>Loading...</h1>
           <img src={Logos} alt="logos animation" className="mb-4" />
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-10 text-center">O'quv markaziga hush kelibsiz</h1>
+
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-10 text-center">
+            O'quv markaziga hush kelibsiz
+          </h1>
+          <TypingEffect
+            textArray={["markaz"]}
+            elementId="typing-effect-heading"
+          />
           <BubbleAnimation></BubbleAnimation>
         </div>
       ) : (

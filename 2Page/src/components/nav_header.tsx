@@ -154,12 +154,10 @@ export const Headernav = () => {
           </Popover>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <NavLink
-            to="/contact"
-            className="flex content-center items-center gap-2 font-medium bg-black text-white px-5 py-2 rounded-lg hover:bg-red-600 ">
+          <Button className="flex content-center items-center gap-2 font-medium bg-black text-white px-5 py-2 rounded-lg hover:bg-red-600 h-12">
             <img src={Calls} alt="call icon" />
-            Murojjat qiling
-          </NavLink>
+            <a href="https://t.me/roboticslab_school">Murojjat qiling</a>
+          </Button>
         </div>
       </nav>
 

@@ -14,7 +14,7 @@ export const Heading = () => {
     <div>
       {loading ? (
         <div className="container mx-auto  py-10 text-center">
-          <Skeleton className="h-48 w-full mb-10 bg-gray-200"></Skeleton>
+          <Skeleton className="h-40 sm:h-[540px] w-full mb-10 bg-gray-200"></Skeleton>
           <Skeleton className="h-20 w-full rounded-xl bg-gray-200 my-4"></Skeleton>
           <Skeleton className="h-16 w-full bg-gray-200"></Skeleton>
           <div className="sm:container container-xl flex gap-10 my-10 justify-center items-center sm:flex-row">

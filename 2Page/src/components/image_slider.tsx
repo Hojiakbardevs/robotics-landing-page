@@ -22,13 +22,13 @@ export const ImageSlider = () => {
   ];
 
   return (
-    <div className="container rounded-3xl mb-10">
-      <Carousel className="w-full shadow-lg rounded-3xl">
+    <div className="container mb-10">
+      <Carousel className="w-full shadow-lg">
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
               <Card className="w-full p-0 md:h-3/4">
-                <CardContent className="flex h-40 sm:h-[540px] items-center justify-center p-0 rounded-3xl overflow-hidden">
+                <CardContent className="flex h-40 sm:h-[540px] items-center justify-center p-0 overflow-hidden">
                   <img
                     src={image}
                     alt={`Carousel image ${index + 1}`}

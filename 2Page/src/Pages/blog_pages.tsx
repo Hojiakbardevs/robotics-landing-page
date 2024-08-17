@@ -3,9 +3,8 @@ export const BlogPages = () => {
     <>
       <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
         <div
-          className="bg-cover bg-center text-center overflow-hidden"
+          className="bg-cover bg-center text-center overflow-hidden sm:min-h-[500px] h-96 "
           style={{
-            minHeight: "500px",
             backgroundImage:
               "url('https://www.essert.com/wp-content/uploads/2023/11/laboratory-automation.jpg')",
           }}

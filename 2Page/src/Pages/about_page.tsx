@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Skeleton } from "@/components/ui/skeleton"; // Import the Skeleton component
-
+import HeadImg1 from "@/assets/about/webp_folder/head1-min.webp"
 export const AboutPage = () => {
   const [loading, setLoading] = useState(true);
 
@@ -19,7 +19,7 @@ export const AboutPage = () => {
               <Skeleton className="h-[125px] w-[250px] rounded-xl bg-gray-200" />
               <div className="space-y-2">
                 <Skeleton className="h-4 w-[250px] bg-gray-200" />
-                <Skeleton className="h-4 w-[200px] bg-gray-200" />
+                
               </div>
             </div>
           </div>
@@ -28,9 +28,9 @@ export const AboutPage = () => {
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-10 text-center mb-10">
               Команда лучших и самых заботливых наставников
             </h1>
-            <p className="text-2xl font-medium mb-4 text-start px-40 opacity-85">
-              bladkfsdfkds
-            </p>
+            <div className="container bg-[#ffcf25] p-5 pt-10">
+              <img src={HeadImg1} alt="" />
+            </div>
           </div>
         )}
       </div>
